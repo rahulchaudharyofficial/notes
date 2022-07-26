@@ -18,13 +18,12 @@ point_t* create_point(double x, double y) {
 }
 
 double distance(point_t *p1, point_t *p2) {
-    double distance = -1;
+    double dist = -1;
     if (p1 != NULL && p2 != NULL) {
         double dx = p1->x - p2->x;
         double dy = p1->y - p2->y;
-
-        double sq = ((dx*dx) - (dy*dy));
-        distance = sqrt(sq);
+        double sq = ((dx*dx) + (dy*dy));
+        dist = sqrt(sq);
     }
-    return distance;
+    return dist;
 }

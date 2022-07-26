@@ -35,7 +35,7 @@ $(INIT):
 	@mkdir -p -v $(TEST)/bin
 
 $(BIN): $(OBJECT)
-#	$(CC) $(CFLAG) $(OBJECT) -o $@
+#	$(CC) $(CFLAG) $(OBJECT) -o $@ -lm
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
 	$(CC) $(CFLAG) -c $< -o $@
